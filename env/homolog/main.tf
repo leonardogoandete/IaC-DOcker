@@ -1,4 +1,4 @@
-module "Producao" {
+module "Homologacao" {
   source = "../../infra"
 
   nome = "Homologacao"
