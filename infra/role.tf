@@ -18,7 +18,6 @@ resource "aws_iam_role" "beanstalk_ec2" {
   })
 }
 
-
 resource "aws_iam_role_policy" "beanstalk_ec2_policy" {
   name = "beanstalk-ec2-policy"
   role = aws_iam_role.beanstalk_ec2.id
@@ -37,17 +36,15 @@ resource "aws_iam_role_policy" "beanstalk_ec2_policy" {
           "logs:*",
           "ssm:*",
           "ec2messages:*",
-          "ecr:GetAuthorizationToken:*",
-          "ecr:BatchCheckLayerAvailability:*",
-          "ecr:GetDownloadUrlForLayer:*",
-          "ecr:GetRepositoryPolicy:*",
-          "ecr:DescribeRepositories:*",
-          "ecr:ListImages:*",
-          "ecr:DescribeImages:*",
-          "ecr:BatchGetImage:*",
+          "ecr:GetAuthorizationToken",
+          "ecr:BatchCheckLayerAvailability",
+          "ecr:GetDownloadUrlForLayer",
+          "ecr:GetRepositoryPolicy",
+          "ecr:DescribeRepositories",
+          "ecr:ListImages",
+          "ecr:DescribeImages",
+          "ecr:BatchGetImage",
           "s3:*"
-
-          
         ]
         Effect   = "Allow"
         Resource = "*"
