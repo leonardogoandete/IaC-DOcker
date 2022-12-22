@@ -1,0 +1,9 @@
+module "Producao" {
+  source = "../../infra"
+
+  nome = "Homologacao"
+  descricao = "Aplicacao-de-homologacao"
+  max = 3
+  maquina = "t2.micro"
+  ambiente = "Ambiente-de-homologacao"
+}
